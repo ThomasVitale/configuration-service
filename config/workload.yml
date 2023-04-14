@@ -1,0 +1,16 @@
+---
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  name: configuration-service
+  labels:
+    apps.kadras.io/workload-type: web
+    apps.kadras.io/has-tests: "true"
+    apps.kadras.io/language: java
+    app.kubernetes.io/part-of: configuration-service
+spec:
+  source:
+    git:
+      url: https://github.com/ThomasVitale/configuration-service
+      ref:
+        branch: main
